@@ -1,0 +1,6 @@
+{
+  "expression": "date('invalid-format', birthDate)",
+  "inputs": {
+    "birthDate": "2020-01-15"
+  }
+}

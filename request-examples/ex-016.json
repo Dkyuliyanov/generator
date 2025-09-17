@@ -1,0 +1,7 @@
+{
+  "expression": "firstName & & lastName",
+  "inputs": {
+    "firstName": "John",
+    "lastName": "Doe"
+  }
+}

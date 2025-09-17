@@ -1,0 +1,7 @@
+{
+  "expression": "salary / zero",
+  "inputs": {
+    "salary": "50000",
+    "zero": "0"
+  }
+}

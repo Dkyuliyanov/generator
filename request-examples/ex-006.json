@@ -1,0 +1,18 @@
+{
+  "expression": "zip(split(assetCodes,','), '.', substring(split(assetTypes,';'), 1, 4), (((currentPrice - purchasePrice) / purchasePrice * 100 * weight / totalWeight + dividendYield * 0.3) > riskThreshold ? (equals(substring(split(sectors,','), 1, 4), 'Tech') & marketCap > '1000000000' & peRatio < '25' & debtRatio < '0.4' ? '_premium_growth' : '_growth') : (currentPrice / purchasePrice > '0.9' ? '_stable' : '_risk')), '@', domain)",
+  "inputs": {
+    "assetCodes": "AAPL,MSFT,GOOGL,TSLA",
+    "assetTypes": "Stock;Bond;ETF;Crypto",
+    "currentPrice": "180",
+    "purchasePrice": "150",
+    "weight": "25",
+    "totalWeight": "100",
+    "dividendYield": "1.5",
+    "riskThreshold": "15",
+    "sectors": "Tech,Healthcare,Energy,Finance",
+    "marketCap": "2500000000",
+    "peRatio": "22",
+    "debtRatio": "0.2",
+    "domain": "portfolio.com"
+  }
+}

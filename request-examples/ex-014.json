@@ -1,0 +1,6 @@
+{
+  "expression": "split(aliases)",
+  "inputs": {
+    "aliases": "a,b"
+  }
+}

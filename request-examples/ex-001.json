@@ -1,0 +1,8 @@
+{
+  "expression": "substring(firstName,1,1) & lastName & '@' & domain",
+  "inputs": {
+    "firstName": "Alice",
+    "lastName": "Smith",
+    "domain": "example.com"
+  }
+}

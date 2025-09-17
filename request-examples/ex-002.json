@@ -1,0 +1,8 @@
+{
+  "expression": "zip(split(aliases,','),'.',lastName,'@',domain)",
+  "inputs": {
+    "aliases": "jean,j,jeannot",
+    "lastName": "Mignard",
+    "domain": "peoplespheres.io"
+  }
+}

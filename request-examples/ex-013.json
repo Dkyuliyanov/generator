@@ -1,0 +1,7 @@
+{
+  "expression": "splitt(aliases,',') & lastName",
+  "inputs": {
+    "aliases": "jean,j",
+    "lastName": "Doe"
+  }
+}

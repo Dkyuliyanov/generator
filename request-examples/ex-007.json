@@ -1,0 +1,22 @@
+{
+  "expression": "zip(split(studentIds,','), '.', substring(split(programs,';'), 1, 4), '.', substring(enrollmentDate, 3, 4), '.', (((mathScore * mathWeight + scienceScore * scienceWeight + englishScore * englishWeight + projectScore * projectWeight) / totalWeight) >= honorsThreshold ? (equals(substring(split(extracurriculars,','), 1, 5), 'Leade') & attendance >= '95' & communityHours >= '40' ? '.summa_cum_laude' : '.magna_cum_laude') : (((mathScore * mathWeight + scienceScore * scienceWeight + englishScore * englishWeight + projectScore * projectWeight) / totalWeight) >= passThreshold ? '.cum_laude' : '.standard')))",
+  "inputs": {
+    "studentIds": "S001,S002,S003",
+    "programs": "ComputerScience;Engineering;Mathematics",
+    "enrollmentDate": "2020-09-15",
+    "mathScore": "88",
+    "mathWeight": "30",
+    "scienceScore": "92",
+    "scienceWeight": "25",
+    "englishScore": "85",
+    "englishWeight": "20",
+    "projectScore": "94",
+    "projectWeight": "25",
+    "totalWeight": "100",
+    "honorsThreshold": "90",
+    "extracurriculars": "Leadership,Sports,Music",
+    "attendance": "97",
+    "communityHours": "50",
+    "passThreshold": "80"
+  }
+}

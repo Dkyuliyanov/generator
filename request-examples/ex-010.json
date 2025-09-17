@@ -1,0 +1,26 @@
+{
+  "expression": "zip(cross_join(split(supplierIds,','), split(products,';')), '.', substring(split(regions,','), 1, 2), '.', substring(date('yyyy-MM-dd', deliveryDate), 6, 7), '.', (((qualityScore * qualityWeight + deliveryTime * timeWeight + cost * costWeight + reliability * reliabilityWeight + sustainability * sustainWeight) / totalWeight) > excellentThreshold ? (equals(substring(split(certifications,','), 1, 3), 'ISO') & carbonFootprint < '50' & ethicsRating >= '4.5' & insuranceCoverage > '1000000' ? '.preferred_platinum' : '.preferred_gold') : (((qualityScore * qualityWeight + deliveryTime * timeWeight + cost * costWeight + reliability * reliabilityWeight + sustainability * sustainWeight) / totalWeight) > goodThreshold ? '.approved_standard' : '.review_required')))",
+  "inputs": {
+    "supplierIds": "SUP001,SUP002",
+    "products": "Electronics;Components;Materials",
+    "regions": "US,EU,APAC",
+    "deliveryDate": "2025-06-15",
+    "qualityScore": "4.8",
+    "qualityWeight": "0.25",
+    "deliveryTime": "3.2",
+    "timeWeight": "0.20",
+    "cost": "85000",
+    "costWeight": "0.30",
+    "reliability": "4.6",
+    "reliabilityWeight": "0.15",
+    "sustainability": "4.4",
+    "sustainWeight": "0.10",
+    "totalWeight": "1.0",
+    "excellentThreshold": "4.5",
+    "certifications": "ISO9001,ISO14001,OHSAS",
+    "carbonFootprint": "35",
+    "ethicsRating": "4.7",
+    "insuranceCoverage": "2500000",
+    "goodThreshold": "3.8"
+  }
+}

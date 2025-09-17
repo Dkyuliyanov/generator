@@ -1,0 +1,8 @@
+{
+  "expression": "firstName & (age < '30' ? '.young' : '.mature') & '@' & domain",
+  "inputs": {
+    "firstName": "John",
+    "age": "25",
+    "domain": "example.com"
+  }
+}

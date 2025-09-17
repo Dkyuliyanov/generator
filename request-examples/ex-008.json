@@ -1,0 +1,22 @@
+{
+  "expression": "zip(split(patientIds,','), '.', substring(split(conditions,';'), 1, 3), '.', substring(admissionDate, 6, 7), '.', (((age * ageRisk + bmi * bmiRisk + bloodPressure * bpRisk + cholesterol * cholRisk) / totalRisk) > criticalThreshold ? (equals(substring(split(medications,','), 1, 4), 'Anti') & insuranceTier > '2' & familyHistory = 'positive' ? '.high_priority_covered' : '.high_priority_review') : (((age * ageRisk + bmi * bmiRisk + bloodPressure * bpRisk + cholesterol * cholRisk) / totalRisk) > moderateThreshold ? '.moderate_monitoring' : '.routine_care')))",
+  "inputs": {
+    "patientIds": "P1001,P1002,P1003",
+    "conditions": "Diabetes;Hypertension;Cardiac",
+    "admissionDate": "2025-03-15",
+    "age": "65",
+    "ageRisk": "2.5",
+    "bmi": "28",
+    "bmiRisk": "1.8",
+    "bloodPressure": "145",
+    "bpRisk": "2.2",
+    "cholesterol": "220",
+    "cholRisk": "1.9",
+    "totalRisk": "8.4",
+    "criticalThreshold": "75",
+    "medications": "Anticoagulant,Statin,ACE",
+    "insuranceTier": "3",
+    "familyHistory": "positive",
+    "moderateThreshold": "60"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "expression": "base + bonus * multiplier - deduction / factor",
+  "inputs": {
+    "base": "100",
+    "bonus": "20",
+    "multiplier": "3",
+    "deduction": "40",
+    "factor": "4"
+  }
+}
